@@ -1,0 +1,31 @@
+@import "../variables";
+@import "./job-card/job-card.component";
+
+.top {
+  background-color: $color-dark-cyan;
+  background-image: url("../assets/img/bg-header-mobile.svg");
+  height: 15rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  align-content: end;
+
+  @media screen and (min-width: 1010px) {
+    background-image: url("../assets/img/bg-header-desktop.svg");
+  }
+}
+
+.content {
+  min-height: calc(100vh - 15rem);
+  background-color: $color-background-cyan;
+  padding-bottom: 4rem;
+
+  .container {
+    overflow: auto;
+    transition: all 0.2s;
+  }
+
+  .container.active {
+    transform: translateY(4rem);
+  }
+}

@@ -1,0 +1,20 @@
+<article class="card" [ngClass]="{'card--featured': job.featured}">
+    <img src="../../assets/img/{{ job.logo }}" alt="Logo of {{ job.company }}">
+    <div class="information">
+        <div class="flex flex-ac">
+            <h4 class="card__company">{{ job.company }}</h4>
+            <span class="flag flag--primary uppercase" *ngIf="job.new">new</span>
+            <span class="flag flag--secondary uppercase" *ngIf="job.featured">featured</span>
+        </div>
+        <h3>{{ job.position }}</h3>
+        <div class="card__spans">
+            <span>{{ job.postedAt }}</span>
+            <span>{{ job.contract }}</span>
+            <span>{{ job.location }}</span>
+        </div>
+        <hr>
+    </div>
+    <div class="filters">
+        <span class="filter" *ngFor="let filter of filters" (click)="submitFilter(filter)">{{ filter }}</span>
+    </div>
+</article>

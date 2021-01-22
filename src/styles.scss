@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Spartan', sans-serif;
+
+    @media screen and (min-width: 220px){
+        font-size: 50%;
+    }
+
+    @media screen and (min-width: 300px){
+        font-size: 65.5%;
+    }
+
+    @media screen and (min-width: 350px){
+        font-size: 80.5%;
+    }
+
+    @media screen and (min-width: 375px){
+        font-size: 100%;
+    }
+}
+
+body{
+    margin: 0;
+    font-size: 15px;
+}
+
+.container{
+    width: 100%;
+    max-width: 92rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.sr-only{
+    position: absolute;
+    left: -999999rem;
+}
+
+.flex{
+    display: flex;
+
+    &-ac{
+        align-items: center;
+    }
+}
+
+.capitalize{
+    text-transform: capitalize;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}

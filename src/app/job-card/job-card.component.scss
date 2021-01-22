@@ -1,0 +1,131 @@
+@import "../../variables";
+@import "../../animations";
+
+.card {
+  background-color: #fff;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 5px;
+  transition: all 2s;
+
+  @media screen and (min-width: 1010px) {
+    display: flex;
+    align-items: center;
+  }
+
+  &--featured {
+    border-left: 6px solid $color-dark-cyan;
+  }
+
+  img {
+    display: block;
+    width: 30%;
+    min-width: 2rem;
+    max-width: 6rem;
+    margin-top: -4rem;
+    @media screen and (min-width: 1010px) {
+      margin-top: 0;
+      margin-right: 2rem;
+    }
+  }
+
+  .information {
+    @media screen and (min-width: 1010px) {
+      margin-right: auto;
+    }
+  }
+
+  &__company {
+    color: $color-dark-cyan;
+    @media screen and (min-width: 1010px) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+    @media screen and (min-width: 1010px) {
+      margin-top: 0.7rem;
+    }
+  }
+
+  .flag {
+    font-size: 0.7rem;
+    padding: 0.7rem 0.5rem 0.5rem 0.5rem;
+    color: white;
+    border-radius: 150rem;
+
+    &--primary {
+      background-color: $color-dark-cyan;
+    }
+
+    &--secondary {
+      background-color: $color-darker-cyan;
+    }
+  }
+
+  &__spans {
+    span {
+      font-size: 0.9rem;
+      color: $color-grayish-cyan;
+      margin-right: 1rem;
+      position: relative;
+
+      &:nth-child(2) {
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          background-color: rgba($color-grayish-cyan, 0.55);
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        &::before {
+          left: -15%;
+        }
+
+        &::after {
+          right: -15%;
+        }
+      }
+    }
+  }
+
+  hr {
+    margin: 1rem 0;
+    color: rgba($color-grayish-cyan, 0.15);
+
+    @media screen and (min-width: 1010px) {
+      display: none;
+    }
+  }
+
+  .flag {
+    margin-left: 1rem;
+  }
+}
+
+.filter {
+  display: block;
+  color: $color-dark-cyan;
+  background-color: $color-background-cyan;
+  border-radius: 5px;
+  font-weight: 700;
+  padding: 0.8rem 1rem 0.6rem 1rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  width: fit-content;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color-background-cyan, 5%);
+  }
+}
+
+.filters {
+  display: flex;
+}

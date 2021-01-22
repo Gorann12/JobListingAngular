@@ -1,0 +1,9 @@
+<div class="filters" [ngClass]="{active: filters.length}">
+    <div class="filter-container">
+        <div class="filter" *ngFor="let filter of filters">
+            {{ filter }}
+            <span class="filter--x" (click)="deleteFilter(filter)">X</span>
+        </div>
+    </div>
+    <button class="clear" (click)="clearAllFilters()">Clear</button>
+</div>

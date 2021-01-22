@@ -1,0 +1,14 @@
+<div class="top">
+  <h1 class="sr-only">Job filtering app</h1>
+  <div class="container">
+    <div class="filters">
+      <app-filter-container style="width: 100%;"></app-filter-container>
+    </div>
+  </div>
+</div>
+<div class="content">
+  <h2 class="sr-only">List of Jobs</h2>
+  <div class="container" [ngClass]="{active: length > 0}">
+    <app-job-card *ngFor="let job of highlightedJobs" [job]="job"></app-job-card>
+  </div>
+</div>

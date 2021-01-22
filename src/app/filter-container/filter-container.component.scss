@@ -1,0 +1,67 @@
+@import "../job-card/job-card.component.scss";
+@import "../../variables";
+@import "../../animations";
+
+.filters{
+    width: 100%;
+    background-color: white;
+    padding: 1rem 2rem 1rem 3rem; 
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .2s;
+    
+    &.active{
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(50%);
+        transition: all .2s;
+    }
+
+    .filter-container{
+        display: flex;
+        flex-wrap: wrap;
+      
+    }
+
+
+    .clear{
+        font-family: inherit;
+        font-size: .9rem;
+        background: none;
+        border: none;
+        color: $color-grayish-cyan;
+        cursor: pointer;
+    }
+
+    .filter{
+        position: relative;
+        margin-right: 2.5rem;
+        animation: .3s ease-in-out forwards popUp;
+
+        &--x{
+            position: absolute;
+            background-color: $color-dark-cyan;
+            color: white;
+            width: 2rem;
+            height: 100%;
+            top: 0;
+            left: 100%;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            transform: translateX(-.3rem);
+            border-radius: 0 5px 5px 0;
+
+            &:hover{
+                background-color: $color-darker-cyan;
+            }
+        }
+
+        &:hover{
+            background-color: $color-background-cyan;
+        }
+    }
+}
